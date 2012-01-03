@@ -17,7 +17,7 @@
  * along with this library; if not, write to the Free Software Foundation,
  * Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307  USA.
  *
- * $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/GtkSpell.xs,v 1.4 2003/09/22 00:45:59 rwmcfa1 Exp $
+ * $Id$
  */
 
 /* TODO: error handling could stand to be improved, or at least thought about */
@@ -52,12 +52,10 @@ newSVGtkSpell (GtkSpell * spell)
 MODULE = Gtk2::Spell	PACKAGE = Gtk2::Spell	PREFIX = gtkspell_
 
 GtkSpell *
-gtkspell_news (class, view, lang=NULL)
-	SV          * class
+gtkspell_new (class, view, lang=NULL)
 	GtkTextView * view
 	const gchar * lang
     ALIAS:
-	Gtk2::Spell::new = 0
 	Gtk2::Spell::new_attach = 1
     PREINIT:
 	GError * error = NULL;
@@ -67,10 +65,11 @@ gtkspell_news (class, view, lang=NULL)
 		gperl_croak_gerror("Gtk2::Spell->new_attach", error);
     OUTPUT:
 	RETVAL
+    CLEANUP:
+	PERL_UNUSED_VAR (ix);
 
 GtkSpell * 
 gtkspell_get_from_text_view (class, view)
-	SV          * class
 	GtkTextView * view
     CODE:
 	RETVAL = gtkspell_get_from_text_view(view);

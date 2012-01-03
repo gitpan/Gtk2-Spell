@@ -1,11 +1,13 @@
 #
-# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/t/0.GtkSpell.t,v 1.3 2003/09/22 00:46:05 rwmcfa1 Exp $
+# $Id$
 #
 
 #########################
 # Gtk2 Tests
 # 	- rm
 #########################
+
+$ENV{LANG} = 'C';
 
 use Gtk2;
 use Test::More;

@@ -1,5 +1,5 @@
 #
-# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/Spell.pm,v 1.7 2003/09/22 00:45:59 rwmcfa1 Exp $
+# $Id$
 #
 
 package Gtk2::Spell;
@@ -14,7 +14,7 @@ require DynaLoader;
 
 our @ISA = qw(DynaLoader);
 
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 sub dl_load_flags { 0x01 }
 
@@ -35,7 +35,7 @@ Gtk2::Spell - Bindings for GtkSpell with Gtk2
   use Gtk2::Spell;
 
   $txtview = Gtk2::TextView->new;
-  $spell = Gtk2::Spell->new_attache($txtview);
+  $spell = Gtk2::Spell->new_attach($txtview);
   $spell2 = Gtk2::Spell->get_from_text_view($txtview);
   # $spell2 will be the same object as $spell
   $spell->set_language(SOME_LANG);

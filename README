@@ -1,7 +1,7 @@
-# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/README,v 1.5 2003/09/22 00:45:59 rwmcfa1 Exp $
+# $Id$
 
-Gtk2::Spell version 1.00
-=================
+Gtk2::Spell version 1.04
+========================
 
 Perl bindings to the 2.x series of the GtkSpell graphical user interface
 library.  This module allows you to write perl applications that utilize the
@@ -53,7 +53,7 @@ This module requires these other modules and libraries:
   GTKSpell > 2.x (C library)
 
 
-COPYRIGHT AND LICENCE
+COPYRIGHT AND LICENSE
 
 Copyright (C) 2003 by the gtk2-perl team (see the file AUTHORS for a
 complete list)
